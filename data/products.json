@@ -1,0 +1,210 @@
+[
+  {
+    "id": "p001",
+    "name": "Linen Wrap Midi Dress",
+    "category": "dresses",
+    "price": 78.0,
+    "tags": ["linen", "summer", "casual", "midi", "beach", "breathable"],
+    "description": "A breathable linen wrap dress with an adjustable tie waist and flowing midi length, perfect for warm-weather days and beach vacations."
+  },
+  {
+    "id": "p002",
+    "name": "Floral Sundress",
+    "category": "dresses",
+    "price": 65.0,
+    "tags": ["floral", "summer", "casual", "sundress", "cotton"],
+    "description": "A lightweight cotton sundress with a cheerful floral print and thin straps, ideal for garden parties and sunny afternoons."
+  },
+  {
+    "id": "p003",
+    "name": "Little Black Dress",
+    "category": "dresses",
+    "price": 120.0,
+    "tags": ["formal", "evening", "black", "cocktail", "elegant"],
+    "description": "A tailored black cocktail dress with a flattering silhouette, perfect for evening events and formal dinners."
+  },
+  {
+    "id": "p004",
+    "name": "Boho Maxi Dress",
+    "category": "dresses",
+    "price": 89.0,
+    "tags": ["boho", "maxi", "summer", "beach", "flowy", "vacation"],
+    "description": "A flowy boho-style maxi dress in a relaxed cut, great for beach vacations and festival season."
+  },
+  {
+    "id": "p005",
+    "name": "Wool Blend Sweater Dress",
+    "category": "dresses",
+    "price": 95.0,
+    "tags": ["wool", "winter", "warm", "knit", "cozy"],
+    "description": "A cozy wool-blend sweater dress with a ribbed knit texture, designed to keep you warm through cold winter months."
+  },
+  {
+    "id": "p006",
+    "name": "Classic White Button-Down",
+    "category": "tops",
+    "price": 55.0,
+    "tags": ["work", "office", "classic", "cotton", "versatile"],
+    "description": "A crisp white cotton button-down shirt that transitions easily from the office to weekend brunch."
+  },
+  {
+    "id": "p007",
+    "name": "Striped Boat-Neck Tee",
+    "category": "tops",
+    "price": 32.0,
+    "tags": ["casual", "striped", "cotton", "everyday", "nautical"],
+    "description": "A soft cotton boat-neck tee with classic nautical stripes, a versatile everyday layering piece."
+  },
+  {
+    "id": "p008",
+    "name": "Silk Cami Top",
+    "category": "tops",
+    "price": 48.0,
+    "tags": ["silk", "evening", "elegant", "lightweight", "date-night"],
+    "description": "A lightweight silk camisole top with a subtle sheen, perfect for date nights or dressing up an evening look."
+  },
+  {
+    "id": "p009",
+    "name": "Oversized Graphic Hoodie",
+    "category": "tops",
+    "price": 60.0,
+    "tags": ["casual", "streetwear", "cozy", "cotton", "weekend"],
+    "description": "A cozy oversized cotton hoodie with a bold graphic print, built for lazy weekends and casual streetwear looks."
+  },
+  {
+    "id": "p010",
+    "name": "Cropped Linen Blouse",
+    "category": "tops",
+    "price": 44.0,
+    "tags": ["linen", "summer", "breathable", "casual", "cropped"],
+    "description": "A breathable cropped linen blouse with relaxed sleeves, made for hot summer days and easy pairing with high-waisted bottoms."
+  },
+  {
+    "id": "p011",
+    "name": "High-Waisted Linen Shorts",
+    "category": "bottoms",
+    "price": 42.0,
+    "tags": ["linen", "summer", "beach", "breathable", "casual"],
+    "description": "Breathable high-waisted linen shorts with a relaxed fit, ideal for beach days and warm-weather travel."
+  },
+  {
+    "id": "p012",
+    "name": "Tailored Wool Trousers",
+    "category": "bottoms",
+    "price": 88.0,
+    "tags": ["work", "office", "wool", "tailored", "formal"],
+    "description": "Tailored wool trousers with a clean straight-leg cut, suited for the office or formal occasions."
+  },
+  {
+    "id": "p013",
+    "name": "High-Rise Skinny Jeans",
+    "category": "bottoms",
+    "price": 70.0,
+    "tags": ["denim", "casual", "everyday", "versatile", "stretch"],
+    "description": "Classic high-rise skinny jeans in stretch denim, an everyday staple that pairs with almost anything."
+  },
+  {
+    "id": "p014",
+    "name": "Pleated Midi Skirt",
+    "category": "bottoms",
+    "price": 58.0,
+    "tags": ["work", "office", "elegant", "midi", "versatile"],
+    "description": "An elegant pleated midi skirt that moves beautifully, easy to dress up for the office or down for weekends."
+  },
+  {
+    "id": "p015",
+    "name": "Athletic Jogger Pants",
+    "category": "bottoms",
+    "price": 50.0,
+    "tags": ["athletic", "casual", "comfortable", "weekend", "cotton"],
+    "description": "Comfortable cotton-blend jogger pants with a tapered fit, built for workouts or lounging on lazy weekends."
+  },
+  {
+    "id": "p016",
+    "name": "Trench Coat",
+    "category": "outerwear",
+    "price": 150.0,
+    "tags": ["classic", "rain", "transitional", "tailored", "timeless"],
+    "description": "A timeless tailored trench coat in water-resistant fabric, perfect for transitional spring and fall weather."
+  },
+  {
+    "id": "p017",
+    "name": "Puffer Jacket",
+    "category": "outerwear",
+    "price": 130.0,
+    "tags": ["winter", "warm", "cozy", "insulated", "cold-weather"],
+    "description": "A warm insulated puffer jacket designed to handle cold winter temperatures without sacrificing style."
+  },
+  {
+    "id": "p018",
+    "name": "Lightweight Denim Jacket",
+    "category": "outerwear",
+    "price": 68.0,
+    "tags": ["denim", "casual", "layering", "transitional", "everyday"],
+    "description": "A classic lightweight denim jacket, an easy layering piece for cool evenings and everyday casual looks."
+  },
+  {
+    "id": "p019",
+    "name": "Cashmere Cardigan",
+    "category": "outerwear",
+    "price": 140.0,
+    "tags": ["cashmere", "cozy", "luxury", "soft", "versatile"],
+    "description": "A soft luxury cashmere cardigan that layers effortlessly over tops for extra warmth without bulk."
+  },
+  {
+    "id": "p020",
+    "name": "Espadrille Sandals",
+    "category": "shoes",
+    "price": 55.0,
+    "tags": ["summer", "beach", "casual", "comfortable", "vacation"],
+    "description": "Comfortable woven espadrille sandals with a low wedge, ideal for beach vacations and casual summer outings."
+  },
+  {
+    "id": "p021",
+    "name": "Leather Ankle Boots",
+    "category": "shoes",
+    "price": 110.0,
+    "tags": ["fall", "winter", "leather", "versatile", "classic"],
+    "description": "Classic leather ankle boots with a stacked heel, versatile enough for fall and winter outfits."
+  },
+  {
+    "id": "p022",
+    "name": "Running Sneakers",
+    "category": "shoes",
+    "price": 95.0,
+    "tags": ["athletic", "comfortable", "workout", "everyday", "sporty"],
+    "description": "Lightweight breathable running sneakers with responsive cushioning, built for workouts and everyday wear."
+  },
+  {
+    "id": "p023",
+    "name": "Strappy Heeled Sandals",
+    "category": "shoes",
+    "price": 75.0,
+    "tags": ["evening", "elegant", "date-night", "formal", "summer"],
+    "description": "Elegant strappy heeled sandals, perfect for evening events and date nights in warm weather."
+  },
+  {
+    "id": "p024",
+    "name": "Straw Tote Bag",
+    "category": "accessories",
+    "price": 38.0,
+    "tags": ["summer", "beach", "straw", "vacation", "casual"],
+    "description": "A spacious woven straw tote bag, perfect for carrying beach essentials on a summer vacation."
+  },
+  {
+    "id": "p025",
+    "name": "Wool Beanie",
+    "category": "accessories",
+    "price": 22.0,
+    "tags": ["winter", "warm", "cozy", "knit", "cold-weather"],
+    "description": "A soft knit wool beanie that keeps you warm on cold winter days."
+  },
+  {
+    "id": "p026",
+    "name": "Statement Gold Earrings",
+    "category": "accessories",
+    "price": 34.0,
+    "tags": ["evening", "elegant", "jewelry", "date-night", "formal"],
+    "description": "Eye-catching statement gold earrings that elevate any evening or date-night outfit."
+  }
+]

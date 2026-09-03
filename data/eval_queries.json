@@ -1,0 +1,52 @@
+[
+  {
+    "query": "something breathable and casual for a beach vacation",
+    "preferences": {},
+    "relevant_product_ids": ["p001", "p004", "p011", "p020", "p024"]
+  },
+  {
+    "query": "warm cozy outfit for cold winter weather",
+    "preferences": {},
+    "relevant_product_ids": ["p005", "p017", "p019", "p025"]
+  },
+  {
+    "query": "elegant outfit for a date night",
+    "preferences": {},
+    "relevant_product_ids": ["p008", "p023", "p026", "p003"]
+  },
+  {
+    "query": "professional office attire",
+    "preferences": {"category": "bottoms"},
+    "relevant_product_ids": ["p006", "p012", "p014"]
+  },
+  {
+    "query": "comfortable clothes for a workout",
+    "preferences": {},
+    "relevant_product_ids": ["p015", "p022"]
+  },
+  {
+    "query": "casual everyday streetwear look",
+    "preferences": {},
+    "relevant_product_ids": ["p007", "p009", "p013", "p018"]
+  },
+  {
+    "query": "formal cocktail party outfit",
+    "preferences": {},
+    "relevant_product_ids": ["p003", "p026", "p023"]
+  },
+  {
+    "query": "transitional jacket for spring or fall weather",
+    "preferences": {"category": "outerwear"},
+    "relevant_product_ids": ["p016", "p018"]
+  },
+  {
+    "query": "lightweight linen pieces for hot summer days",
+    "preferences": {},
+    "relevant_product_ids": ["p001", "p010", "p011"]
+  },
+  {
+    "query": "classic leather boots for fall",
+    "preferences": {"max_price": 150},
+    "relevant_product_ids": ["p021"]
+  }
+]
