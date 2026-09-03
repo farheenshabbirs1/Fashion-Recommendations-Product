@@ -1,0 +1,70 @@
+# Illustrative example of a blue-green cutover for recommendation-service -- not applied by
+# default (02-recommendation-service.yaml is the plain single-Deployment version actually
+# referenced by CI). Same pattern as JobFit Checker's infra/k8s/blue-green-example.yaml.
+#
+# The pattern: run two full Deployments of the same service at once, "blue" (currently live) and
+# "green" (the new version), each with its own label so they don't share pods. A Service selects
+# on a *third* label, "slot", that only one of the two Deployments carries at a time. Deploying a
+# new version means: apply the green Deployment with the new image tag, wait for its pods to pass
+# readiness (/ready -- which for this service also confirms its embedding index rebuilt cleanly),
+# smoke-test it directly (e.g. via a temporary port-forward or its own debug Service), then flip
+# the traffic Service's selector from slot: blue to slot: green with one `kubectl patch`. Rollback
+# is the same patch in reverse -- no rebuild, no waiting on a new rollout. GitHub Actions can
+# drive this by templating IMAGE_TAG into the "green" Deployment, applying it, running a health
+# check against it, and patching the Service.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: recommendation-service-blue
+  namespace: fashion-rag
+  labels: { app: recommendation-service, slot: blue }
+spec:
+  replicas: 2
+  selector:
+    matchLabels: { app: recommendation-service, slot: blue }
+  template:
+    metadata:
+      labels: { app: recommendation-service, slot: blue }
+    spec:
+      containers:
+        - name: recommendation-service
+          image: ${ACR_LOGIN_SERVER}/fashion-rag-recommendation-service:${BLUE_IMAGE_TAG}
+          ports: [{ containerPort: 8000 }]
+          envFrom:
+            - configMapRef: { name: fashion-rag-config }
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: recommendation-service-green
+  namespace: fashion-rag
+  labels: { app: recommendation-service, slot: green }
+spec:
+  replicas: 2
+  selector:
+    matchLabels: { app: recommendation-service, slot: green }
+  template:
+    metadata:
+      labels: { app: recommendation-service, slot: green }
+    spec:
+      containers:
+        - name: recommendation-service
+          image: ${ACR_LOGIN_SERVER}/fashion-rag-recommendation-service:${GREEN_IMAGE_TAG}
+          ports: [{ containerPort: 8000 }]
+          envFrom:
+            - configMapRef: { name: fashion-rag-config }
+---
+# Traffic goes wherever "slot" currently points -- start with blue.
+apiVersion: v1
+kind: Service
+metadata:
+  name: recommendation-service
+  namespace: fashion-rag
+spec:
+  selector: { app: recommendation-service, slot: blue }
+  ports:
+    - port: 8000
+      targetPort: 8000
+
+# To cut over once green is verified healthy:
+#   kubectl patch service recommendation-service -n fashion-rag -p '{"spec":{"selector":{"app":"recommendation-service","slot":"green"}}}'

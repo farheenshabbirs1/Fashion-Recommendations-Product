@@ -1,0 +1,12 @@
+# No Secret here (unlike JobFit Checker's DB credentials) -- the default config runs entirely
+# on the mock LLM and TF-IDF embeddings, so there's nothing sensitive to store. Pointing this at
+# a real provider means adding e.g. OPENAI_API_KEY / ANTHROPIC_API_KEY as a Kubernetes Secret and
+# referencing it from the Deployment's envFrom alongside this ConfigMap.
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fashion-rag-config
+  namespace: fashion-rag
+data:
+  EMBEDDER: "tfidf"
+  LLM_PROVIDER: "mock"

@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: recommendation-service
+  namespace: fashion-rag
+spec:
+  replicas: 2
+  selector:
+    matchLabels: { app: recommendation-service }
+  template:
+    metadata:
+      labels: { app: recommendation-service }
+    spec:
+      containers:
+        - name: recommendation-service
+          image: ${ACR_LOGIN_SERVER}/fashion-rag-recommendation-service:${IMAGE_TAG}
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - configMapRef: { name: fashion-rag-config }
+          # The pipeline (and its embedding index) is built once at process startup, so give it
+          # room before probes start counting failures -- see fashion_rag/api.py's lifespan hook.
+          readinessProbe:
+            httpGet: { path: /ready, port: 8000 }
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            httpGet: { path: /health, port: 8000 }
+            initialDelaySeconds: 15
+            periodSeconds: 20
+          resources:
+            requests: { cpu: "100m", memory: "256Mi" }
+            limits: { cpu: "500m", memory: "512Mi" }
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: recommendation-service
+  namespace: fashion-rag
+spec:
+  selector: { app: recommendation-service }
+  ports:
+    - port: 8000
+      targetPort: 8000

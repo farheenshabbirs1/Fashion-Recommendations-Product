@@ -1,0 +1,17 @@
+services:
+  recommendation-service:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      # Defaults: TF-IDF embeddings + the deterministic mock LLM -- no API key needed to run
+      # this locally. Set these (and the matching *_API_KEY) to point at a real provider.
+      EMBEDDER: tfidf
+      LLM_PROVIDER: mock
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health', timeout=2)"]
+      interval: 15s
+      timeout: 3s
+      retries: 5
