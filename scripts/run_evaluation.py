@@ -28,7 +28,7 @@ def main() -> None:
         results = retriever.search(query, top_k=top_k)
         return [r.product.id for r in results]
 
-    scores = evaluate_system(recommend_fn, products, eval_queries, top_k=5)
+    scores = evaluate_system(recommend_fn, products, eval_queries, top_k=4)
 
     print("Retrieval quality (averaged over labeled eval queries):\n")
     for name, result in scores.items():

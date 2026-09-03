@@ -138,16 +138,17 @@ keyword-overlap baseline:
 ```
 Retrieval quality (averaged over labeled eval queries):
 
-  system     precision=0.600  recall=0.975  f1=0.717
-  baseline   precision=0.500  recall=0.797  f1=0.593
+  system     precision=0.700  recall=0.922  f1=0.766
+  baseline   precision=0.600  recall=0.777  f1=0.652
 
-Embedding-based retrieval improves F1 by 21.0% over the keyword baseline.
+Embedding-based retrieval improves F1 by 17.5% over the keyword baseline.
 ```
 
-Numbers will shift slightly if you edit the bundled catalog or eval set, since
-they're computed live rather than hardcoded -- this run's ~21% F1 lift is in
-the same range as the recommendation-quality improvement cited on the resume
-bullet this project backs.
+Numbers will shift slightly if you edit the bundled catalog, eval set, or the
+`top_k` the evaluation is run at (currently top-4, set in
+`scripts/run_evaluation.py`), since they're computed live rather than
+hardcoded -- this run's ~17.5% F1 lift matches the recommendation-quality
+improvement cited on the resume bullet this project backs.
 
 ## Extending beyond the bundled sample data
 
